@@ -18,43 +18,32 @@ end
   #to compare the words in the tweet against the keys in the hash.
   #If there are any matches, replace the word in the tweet with the
   #associated substitute from the hash.
-  #def word_substituter(tweet)
-  #  words = tweet.split(" ")
-  #  short_tweet = []
+  def word_substituter(tweet)
+    words = tweet.split(" ")
+    short_tweet = []
 
-  #    words.each do |word|
-  #     case word.downcase
-  #     when "hello"
-  #       short_tweet << "hi"
-  #     when "to", "two", "too"
-  #     when "for", "four"
-  #      short_tweet << "4"
-  #     when "be"
-  #      short_tweet << "b"
-  #     when "you"
-  #       short_tweet << "u"
-  #     when "at"
-  #        short_tweet << "@"
-  #     when "and"
-  #        short_tweet << "&"
-  #     else
-  #        short_tweet << word
-  #    end
-  #  end
-  #    short_tweet.join(" ")
-  #  end
-
-
- def word_substituter(tweet)
-    tweet_array = tweet.split.map do |word|
-        if dictionary.keys.include?(word.downcase)
-                word = dictionary[word.downcase]
-        else
-            word
-        end
+      words.each do |word|
+       case word.downcase
+       when "hello"
+         short_tweet << "hi"
+       when "to", "two", "too"
+          short_tweet << "2"
+       when "for", "four"
+        short_tweet << "4"
+       when "be"
+        short_tweet << "b"
+       when "you"
+         short_tweet << "u"
+       when "at"
+          short_tweet << "@"
+       when "and"
+          short_tweet << "&"
+       else
+          short_tweet << word
+      end
     end
-    puts tweet_array.join(" ")
-end
+      short_tweet.join(" ")
+    end
 #Write a method, bulk_tweet_shortener that takes in an array
 #of tweets, iterates over them, shortens them, and puts out
 #the results to the screen.

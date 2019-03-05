@@ -40,7 +40,7 @@ end
           short_tweet << "&"
        else
           short_tweet << word
-    #  end
+   end
     end
       short_tweet.join(" ")
     end

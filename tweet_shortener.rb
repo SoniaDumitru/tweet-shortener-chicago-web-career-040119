@@ -23,7 +23,7 @@ end
     short_tweet = []
 
       words.each do |word|
-       case word.downcase
+      # case word.downcase
        when "hello"
          short_tweet << "hi"
        when "to", "two", "too"
@@ -40,7 +40,7 @@ end
           short_tweet << "&"
        else
           short_tweet << word
-      end
+    #  end
     end
       short_tweet.join(" ")
     end

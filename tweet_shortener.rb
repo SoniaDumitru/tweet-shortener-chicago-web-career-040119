@@ -44,7 +44,7 @@ end
   #    short_tweet.join(" ")
   #  end
 
-    
+
  def word_substituter(tweet)
     tweet_array = tweet.split.map do |word|
         if dictionary.keys.include?(word.downcase)
